@@ -39,11 +39,11 @@ gulp.task('uncss', function(){
 
 gulp.task('copy', function(){
   return gulp.src('src/**/*.html')
-    .pipe(useref())
-    .pipe(gulpif('*.js', sourcemaps.init()))
-    .pipe(gulpif('*.js', babel({presets: ["env"]})))
-    .pipe(gulpif('*.js', uglify()))
-    .pipe(gulpif('*.js', sourcemaps.write('.')))
+    // .pipe(useref())
+    // .pipe(gulpif('*.js', sourcemaps.init()))
+    // .pipe(gulpif('*.js', babel({presets: ["env"]})))
+    // .pipe(gulpif('*.js', uglify()))
+    // .pipe(gulpif('*.js', sourcemaps.write('.')))
     .pipe(gulp.dest('dist'))
     .pipe(browserSync.stream())
 });
